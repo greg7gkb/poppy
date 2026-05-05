@@ -1,0 +1,67 @@
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node / TypeScript
+node_modules/
+dist/
+build/
+out/
+.next/
+.tsbuildinfo
+*.log
+.pnpm-debug.log*
+.npm/
+.yarn/
+.pnp.*
+coverage/
+.nyc_output/
+
+# Kotlin / Android / Gradle
+*.iml
+.gradle/
+local.properties
+captures/
+*.apk
+*.aab
+*.ap_
+*.dex
+proguard/
+
+# Swift / iOS / Xcode
+.build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcworkspace/xcuserdata/
+Package.resolved
+
+# Python (potential future tooling)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+*.pem
+secrets.*
+
+# Misc
+tmp/
+temp/
+.cache/

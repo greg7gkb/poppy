@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  meta:
+    name: Repo metadata sanity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify governance files exist
+        run: |
+          set -euxo pipefail
+          test -f LICENSE
+          test -f NOTICE
+          test -f README.md
+          test -f CONTRIBUTING.md
+          test -f CODE_OF_CONDUCT.md
+          test -f SECURITY.md
+          test -d docs/adr
+
+  # Phase 1+ jobs (TS lint/test, schema validation, conformance corpus,
+  # Android, iOS) are added as the corresponding packages land.
