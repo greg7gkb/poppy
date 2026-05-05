@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/components/text.schema.json",
+  "title": "Text",
+  "description": "A run of plain text. Markdown and inline formatting are intentionally not supported in v0.1; defer to a separate RichText component if needed in a later version.",
+  "type": "object",
+  "properties": {
+    "type": { "const": "Text" },
+    "id": {
+      "type": "string",
+      "description": "Optional component identifier."
+    },
+    "value": {
+      "type": "string",
+      "description": "The plain-text content. Renderers MUST insert this as text-only with no HTML/markdown interpretation. May be empty."
+    },
+    "color": { "$ref": "../tokens/color.schema.json" },
+    "size": { "$ref": "../tokens/size.schema.json" },
+    "weight": { "$ref": "../tokens/weight.schema.json" }
+  },
+  "required": ["type", "value"],
+  "additionalProperties": false
+}

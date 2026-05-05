@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/components/image.schema.json",
+  "title": "Image",
+  "description": "An image. Renderers MUST validate URLs against an allowlist before loading; the schema does not constrain the URL scheme. Required alt text is mandated for accessibility from day one.",
+  "type": "object",
+  "properties": {
+    "type": { "const": "Image" },
+    "id": {
+      "type": "string",
+      "description": "Optional component identifier."
+    },
+    "url": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The image source URI. Opaque to the schema (no format:'uri' constraint) since hosts may use custom schemes; renderers apply their own allowlist."
+    },
+    "alt": {
+      "type": "string",
+      "description": "Required accessible description. May be an empty string for purely decorative images, but the field MUST be present so the renderer can route it to platform accessibility APIs."
+    },
+    "width": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Optional width in logical pixels (CSS px on web, dp on Android, pt on iOS). Intrinsic size is used if omitted."
+    },
+    "height": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Optional height in logical pixels. Intrinsic size is used if omitted."
+    },
+    "fit": {
+      "$ref": "../tokens/fit.schema.json",
+      "description": "How the image fills its bounds when both width and height are specified. Default: contain."
+    }
+  },
+  "required": ["type", "url", "alt"],
+  "additionalProperties": false
+}

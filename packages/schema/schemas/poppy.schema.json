@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/poppy.schema.json",
+  "title": "Poppy document",
+  "description": "A Poppy server-driven UI document, version 0.1. The root of every Poppy wire-format payload. See ADR-0006 for versioning rules.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Optional canonical schema URL for editor integration. Renderers do not consult this field; they use 'version'."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$",
+      "description": "Wire-format version, MAJOR.MINOR. Renderers reject unknown majors and forward-compat across minors (ignoring unknown fields on known components). See ADR-0006."
+    },
+    "root": {
+      "$ref": "#/$defs/Component"
+    }
+  },
+  "required": ["version", "root"],
+  "unevaluatedProperties": false,
+  "$defs": {
+    "Component": {
+      "description": "Discriminated union of all v0.1 component types.",
+      "oneOf": [
+        { "$ref": "components/stack.schema.json" },
+        { "$ref": "components/text.schema.json" },
+        { "$ref": "components/image.schema.json" },
+        { "$ref": "components/button.schema.json" }
+      ],
+      "discriminator": { "propertyName": "type" }
+    },
+    "Action": {
+      "description": "Discriminated union of all v0.1 action types. Renderers dispatch actions to the host application's onAction callback verbatim.",
+      "oneOf": [
+        { "$ref": "actions/navigate.schema.json" }
+      ],
+      "discriminator": { "propertyName": "type" }
+    }
+  }
+}

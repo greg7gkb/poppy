@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/tokens/axis.schema.json",
+  "title": "Axis token",
+  "description": "The main axis along which a Stack lays out its children.",
+  "type": "string",
+  "enum": ["horizontal", "vertical"]
+}

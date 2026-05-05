@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/components/button.schema.json",
+  "title": "Button",
+  "description": "A pressable element with a label and an action. Variants and icons are intentionally deferred to Phase 5's design system.",
+  "type": "object",
+  "properties": {
+    "type": { "const": "Button" },
+    "id": {
+      "type": "string",
+      "description": "Optional component identifier."
+    },
+    "label": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The visible label. Plain text only (no markdown)."
+    },
+    "action": {
+      "$ref": "../poppy.schema.json#/$defs/Action",
+      "description": "The action dispatched on press. Renderers pass this verbatim to the host's onAction callback."
+    }
+  },
+  "required": ["type", "label", "action"],
+  "additionalProperties": false
+}

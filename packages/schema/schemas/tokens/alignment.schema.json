@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/tokens/alignment.schema.json",
+  "title": "Alignment token",
+  "description": "Cross-axis alignment for Stack: perpendicular to the stack's axis. For a vertical stack, this aligns children horizontally; for a horizontal stack, vertically. Stretch makes children fill the cross-axis.",
+  "type": "string",
+  "enum": ["start", "center", "end", "stretch"]
+}

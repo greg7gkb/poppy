@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/poppy.schema.json",
+  "version": "0.1",
+  "root": {
+    "type": "Image",
+    "url": "https://example.com/poppies.jpg",
+    "alt": "A field of red poppies in summer light.",
+    "width": 320,
+    "height": 240,
+    "fit": "cover"
+  }
+}

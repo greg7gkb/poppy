@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/poppy.schema.json",
+  "version": "0.1",
+  "root": {
+    "type": "Stack",
+    "axis": "vertical",
+    "spacing": "md",
+    "padding": "lg",
+    "alignment": "start",
+    "children": [
+      {
+        "type": "Text",
+        "value": "Welcome",
+        "size": "xl",
+        "weight": "bold"
+      },
+      {
+        "type": "Text",
+        "value": "Two-line layout in a vertical stack with medium spacing and large padding.",
+        "color": "secondary"
+      }
+    ]
+  }
+}

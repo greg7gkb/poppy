@@ -1,0 +1,78 @@
+{
+  "$schema": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/poppy.schema.json",
+  "version": "0.1",
+  "root": {
+    "type": "Stack",
+    "id": "screen-root",
+    "axis": "vertical",
+    "spacing": "md",
+    "padding": "lg",
+    "alignment": "stretch",
+    "children": [
+      {
+        "type": "Stack",
+        "axis": "horizontal",
+        "spacing": "sm",
+        "alignment": "center",
+        "children": [
+          {
+            "type": "Image",
+            "url": "https://example.com/avatar.png",
+            "alt": "User avatar",
+            "width": 48,
+            "height": 48,
+            "fit": "cover"
+          },
+          {
+            "type": "Stack",
+            "axis": "vertical",
+            "spacing": "xs",
+            "children": [
+              {
+                "type": "Text",
+                "value": "Greg",
+                "size": "lg",
+                "weight": "bold"
+              },
+              {
+                "type": "Text",
+                "value": "Signed in",
+                "size": "sm",
+                "color": "secondary"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Text",
+        "value": "You have 3 unread notifications.",
+        "color": "primary"
+      },
+      {
+        "type": "Stack",
+        "axis": "horizontal",
+        "spacing": "sm",
+        "alignment": "end",
+        "children": [
+          {
+            "type": "Button",
+            "label": "Dismiss",
+            "action": {
+              "type": "navigate",
+              "uri": "poppy://notifications/dismiss-all"
+            }
+          },
+          {
+            "type": "Button",
+            "label": "View all",
+            "action": {
+              "type": "navigate",
+              "uri": "poppy://notifications"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
