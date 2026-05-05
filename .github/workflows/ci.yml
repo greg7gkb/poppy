@@ -23,5 +23,26 @@ jobs:
           test -f SECURITY.md
           test -d docs/adr
 
-  # Phase 1+ jobs (TS lint/test, schema validation, conformance corpus,
-  # Android, iOS) are added as the corresponding packages land.
+  js:
+    name: TypeScript packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Lint
+        run: pnpm biome ci .
+      - name: Typecheck
+        run: pnpm -r typecheck
+      - name: Build
+        run: pnpm -r build
+      - name: Test
+        run: pnpm -r test
+
+  # Future jobs (conformance corpus across web/Android/iOS renderers) are
+  # added as the corresponding packages land.

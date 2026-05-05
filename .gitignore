@@ -65,3 +65,8 @@ secrets.*
 tmp/
 temp/
 .cache/
+
+# Generated artifacts (Phase 1+)
+# Ajv standalone validator output — regenerated on every build
+packages/server-ts/src/generated/*.js
+!packages/server-ts/src/generated/*.d.ts

@@ -1,0 +1,30 @@
+{
+  "name": "@poppy/schema",
+  "version": "0.1.0-alpha.0",
+  "description": "JSON Schema source of truth for Poppy server-driven UI documents.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greg7gkb/poppy.git",
+    "directory": "packages/schema"
+  },
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./schemas/*": "./schemas/*"
+  },
+  "files": ["src/", "schemas/", "README.md"],
+  "scripts": {
+    "build": "echo '@poppy/schema is a source-only package in v0.1; no build step.'",
+    "typecheck": "tsc --noEmit",
+    "test": "echo '@poppy/schema has no tests yet (see @poppy/server-ts)'"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

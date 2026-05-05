@@ -33,9 +33,7 @@
     },
     "Action": {
       "description": "Discriminated union of all v0.1 action types. Renderers dispatch actions to the host application's onAction callback verbatim.",
-      "oneOf": [
-        { "$ref": "actions/navigate.schema.json" }
-      ],
+      "oneOf": [{ "$ref": "actions/navigate.schema.json" }],
       "discriminator": { "propertyName": "type" }
     }
   }
