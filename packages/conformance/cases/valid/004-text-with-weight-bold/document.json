@@ -1,0 +1,4 @@
+{
+  "version": "0.1",
+  "root": { "type": "Text", "value": "Bold text", "weight": "bold" }
+}

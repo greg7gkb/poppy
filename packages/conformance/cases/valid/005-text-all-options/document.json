@@ -1,0 +1,10 @@
+{
+  "version": "0.1",
+  "root": {
+    "type": "Text",
+    "value": "All options",
+    "color": "primary",
+    "size": "lg",
+    "weight": "bold"
+  }
+}

@@ -26,6 +26,7 @@
     "test:watch": "vitest"
   },
   "devDependencies": {
+    "@poppy/conformance": "workspace:*",
     "@poppy/schema": "workspace:*",
     "@types/node": "^22.0.0",
     "ajv": "^8.17.0",

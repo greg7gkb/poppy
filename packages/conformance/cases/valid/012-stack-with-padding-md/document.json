@@ -1,0 +1,9 @@
+{
+  "version": "0.1",
+  "root": {
+    "type": "Stack",
+    "axis": "vertical",
+    "padding": "md",
+    "children": [{ "type": "Text", "value": "Padded" }]
+  }
+}

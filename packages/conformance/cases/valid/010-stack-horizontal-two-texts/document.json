@@ -1,0 +1,8 @@
+{
+  "version": "0.1",
+  "root": {
+    "type": "Stack",
+    "axis": "horizontal",
+    "children": [{ "type": "Text", "value": "Left" }, { "type": "Text", "value": "Right" }]
+  }
+}

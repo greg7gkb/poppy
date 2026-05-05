@@ -1,0 +1,8 @@
+{
+  "version": "0.1",
+  "root": {
+    "type": "Stack",
+    "axis": "vertical",
+    "children": [{ "type": "Text", "value": "First" }, { "type": "Text", "value": "Second" }]
+  }
+}

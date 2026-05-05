@@ -1,0 +1,7 @@
+{
+  "version": "0.1",
+  "root": {
+    "type": "Image",
+    "url": "https://example.com/x.png"
+  }
+}

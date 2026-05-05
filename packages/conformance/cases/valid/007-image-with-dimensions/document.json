@@ -1,0 +1,10 @@
+{
+  "version": "0.1",
+  "root": {
+    "type": "Image",
+    "url": "https://example.com/image.png",
+    "alt": "Sized image",
+    "width": 200,
+    "height": 100
+  }
+}

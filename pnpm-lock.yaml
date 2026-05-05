@@ -15,6 +15,15 @@ importers:
         specifier: ^5.6.0
         version: 5.9.3
 
+  packages/conformance:
+    devDependencies:
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.19.17
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.3
+
   packages/schema:
     devDependencies:
       typescript:
@@ -23,6 +32,9 @@ importers:
 
   packages/server-ts:
     devDependencies:
+      '@poppy/conformance':
+        specifier: workspace:*
+        version: link:../conformance
       '@poppy/schema':
         specifier: workspace:*
         version: link:../schema

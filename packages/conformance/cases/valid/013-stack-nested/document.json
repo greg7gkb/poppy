@@ -1,0 +1,18 @@
+{
+  "version": "0.1",
+  "root": {
+    "type": "Stack",
+    "axis": "vertical",
+    "spacing": "md",
+    "children": [
+      { "type": "Text", "value": "Header" },
+      {
+        "type": "Stack",
+        "axis": "horizontal",
+        "spacing": "sm",
+        "children": [{ "type": "Text", "value": "Left" }, { "type": "Text", "value": "Right" }]
+      },
+      { "type": "Text", "value": "Footer" }
+    ]
+  }
+}

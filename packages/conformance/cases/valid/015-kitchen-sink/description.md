@@ -1,0 +1,1 @@
+A realistic profile-card layout combining all v0.1 components: nested stacks (vertical containing horizontal containing vertical), an image, multiple Texts with varying tokens, and two buttons with navigate actions. Catches regressions in component interaction and exercises every component at least once.

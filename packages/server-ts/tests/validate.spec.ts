@@ -1,71 +1,46 @@
-import { readFileSync, readdirSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+// API-level smoke tests for validate() and isValid().
+// Schema-level coverage (per-component, per-token) lives in corpus.spec.ts,
+// which exercises the @poppy/conformance corpus.
+
 import { describe, expect, it } from "vitest";
 import { isValid, validate } from "../src/index.js";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const examplesDir = resolve(__dirname, "..", "..", "schema", "examples");
-
-describe("validate (positive cases)", () => {
-  for (const file of readdirSync(examplesDir).filter((n) => n.endsWith(".json"))) {
-    it(`accepts example ${file}`, () => {
-      const doc = JSON.parse(readFileSync(join(examplesDir, file), "utf-8"));
-      const result = validate(doc);
-      if (!result.ok) {
-        console.error(file, result.errors);
-      }
-      expect(result.ok).toBe(true);
-    });
-  }
-});
-
-describe("validate (negative cases)", () => {
-  it("rejects empty object", () => {
-    expect(validate({}).ok).toBe(false);
+describe("validate() API", () => {
+  it("returns ok:true with the typed document for a valid input", () => {
+    const doc = { version: "0.1", root: { type: "Text", value: "Hi" } };
+    const result = validate(doc);
+    expect(result.ok).toBe(true);
+    if (result.ok) {
+      expect(result.document).toEqual(doc);
+    }
   });
 
-  it("rejects document missing root", () => {
-    expect(validate({ version: "0.1" }).ok).toBe(false);
+  it("returns ok:false with errors for invalid input", () => {
+    const result = validate({});
+    expect(result.ok).toBe(false);
+    if (!result.ok) {
+      expect(result.errors.length).toBeGreaterThan(0);
+      expect(result.errors[0]).toHaveProperty("keyword");
+      expect(result.errors[0]).toHaveProperty("message");
+      expect(result.errors[0]).toHaveProperty("path");
+    }
   });
 
-  it("rejects document missing version", () => {
+  it("never throws on garbage input", () => {
+    for (const garbage of [null, undefined, 0, "", [], "not-json-but-a-string"]) {
+      expect(() => validate(garbage)).not.toThrow();
+    }
+  });
+
+  it("rejects a document missing version", () => {
     expect(validate({ root: { type: "Text", value: "x" } }).ok).toBe(false);
   });
 
-  it("rejects unknown component type", () => {
-    const doc = {
-      version: "0.1",
-      root: { type: "Heading", value: "Hello" },
-    };
-    expect(validate(doc).ok).toBe(false);
+  it("rejects a document missing root", () => {
+    expect(validate({ version: "0.1" }).ok).toBe(false);
   });
 
-  it("rejects Image without alt", () => {
-    const doc = {
-      version: "0.1",
-      root: { type: "Image", url: "https://example.com/x.png" },
-    };
-    expect(validate(doc).ok).toBe(false);
-  });
-
-  it("rejects Text with non-string value", () => {
-    const doc = {
-      version: "0.1",
-      root: { type: "Text", value: 42 },
-    };
-    expect(validate(doc).ok).toBe(false);
-  });
-
-  it("rejects Button without action", () => {
-    const doc = {
-      version: "0.1",
-      root: { type: "Button", label: "x" },
-    };
-    expect(validate(doc).ok).toBe(false);
-  });
-
-  it("rejects Stack with unknown axis", () => {
+  it("rejects a Stack with an unknown axis token", () => {
     const doc = {
       version: "0.1",
       root: { type: "Stack", axis: "diagonal", children: [] },
@@ -74,14 +49,19 @@ describe("validate (negative cases)", () => {
   });
 });
 
-describe("isValid type guard", () => {
+describe("isValid() API", () => {
   it("returns true for a valid document", () => {
     const doc: unknown = { version: "0.1", root: { type: "Text", value: "Hi" } };
     expect(isValid(doc)).toBe(true);
   });
 
   it("returns false for an invalid document", () => {
-    const doc: unknown = { version: "0.1" };
-    expect(isValid(doc)).toBe(false);
+    expect(isValid({ version: "0.1" })).toBe(false);
+  });
+
+  it("never throws on garbage", () => {
+    for (const garbage of [null, undefined, 0, "", []]) {
+      expect(() => isValid(garbage)).not.toThrow();
+    }
   });
 });
