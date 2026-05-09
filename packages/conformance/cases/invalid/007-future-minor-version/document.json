@@ -1,0 +1,4 @@
+{
+  "version": "0.99",
+  "root": { "type": "Text", "value": "from a future minor" }
+}

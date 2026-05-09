@@ -1,0 +1,1 @@
+A document declaring a major version this renderer does not know. Per ADR-0006, renderers reject any document whose major version differs from their own — silent best-effort rendering would degrade UX in ways the host cannot detect.

@@ -49,6 +49,44 @@ describe("validate() API", () => {
   });
 });
 
+describe("version compatibility (ADR-0006)", () => {
+  it("accepts the renderer's exact version", () => {
+    const doc = { version: "0.1", root: { type: "Text", value: "x" } };
+    expect(validate(doc).ok).toBe(true);
+  });
+
+  it("rejects an unknown major with keyword 'version' at /version", () => {
+    const doc = { version: "999.0", root: { type: "Text", value: "x" } };
+    const result = validate(doc);
+    expect(result.ok).toBe(false);
+    if (!result.ok) {
+      expect(result.errors).toHaveLength(1);
+      expect(result.errors[0].keyword).toBe("version");
+      expect(result.errors[0].path).toBe("/version");
+    }
+  });
+
+  it("rejects a future minor within the supported major", () => {
+    const doc = { version: "0.99", root: { type: "Text", value: "x" } };
+    const result = validate(doc);
+    expect(result.ok).toBe(false);
+    if (!result.ok) {
+      expect(result.errors[0].keyword).toBe("version");
+      expect(result.errors[0].path).toBe("/version");
+    }
+  });
+
+  it("reports schema errors (not version errors) when version is malformed", () => {
+    const doc = { version: "abc", root: { type: "Text", value: "x" } };
+    const result = validate(doc);
+    expect(result.ok).toBe(false);
+    if (!result.ok) {
+      const keywords = new Set(result.errors.map((e) => e.keyword));
+      expect(keywords).not.toContain("version");
+    }
+  });
+});
+
 describe("isValid() API", () => {
   it("returns true for a valid document", () => {
     const doc: unknown = { version: "0.1", root: { type: "Text", value: "Hi" } };

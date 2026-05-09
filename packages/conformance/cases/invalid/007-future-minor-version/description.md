@@ -1,0 +1,1 @@
+A document declaring a minor version newer than this renderer supports. Per ADR-0006, renderers accept the same or older minor within their major; a higher minor may carry components or required fields the renderer does not recognize and is rejected explicitly.
