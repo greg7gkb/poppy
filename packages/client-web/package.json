@@ -1,0 +1,40 @@
+{
+  "name": "@poppy/client-web",
+  "version": "0.1.0-alpha.0",
+  "description": "Native DOM (no framework) renderer for Poppy documents in the browser.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greg7gkb/poppy.git",
+    "directory": "packages/client-web"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/poppy.css"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist/", "README.md"],
+  "scripts": {
+    "build": "tsup && cp src/styles/poppy.css dist/poppy.css",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "snapshots:update": "node --import tsx/esm scripts/update-snapshots.ts"
+  },
+  "devDependencies": {
+    "@poppy/conformance": "workspace:*",
+    "@poppy/schema": "workspace:*",
+    "@poppy/server-ts": "workspace:*",
+    "@types/node": "^22.0.0",
+    "jsdom": "^25.0.1",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

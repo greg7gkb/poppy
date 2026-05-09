@@ -1,0 +1,185 @@
+/*
+ * Poppy v0.1 — web client default styles.
+ *
+ * Tokens are exposed as CSS custom properties under :root. Hosts theme by
+ * overriding any --poppy-* variable at a parent scope. See ADR-0006 for the
+ * versioning rules these classes encode.
+ */
+
+:root {
+  /* Spacing scale (px) */
+  --poppy-space-none: 0;
+  --poppy-space-xs: 4px;
+  --poppy-space-sm: 8px;
+  --poppy-space-md: 16px;
+  --poppy-space-lg: 24px;
+  --poppy-space-xl: 32px;
+
+  /* Text size scale (px) */
+  --poppy-size-xs: 12px;
+  --poppy-size-sm: 14px;
+  --poppy-size-md: 16px;
+  --poppy-size-lg: 20px;
+  --poppy-size-xl: 28px;
+
+  /* Text weights */
+  --poppy-weight-regular: 400;
+  --poppy-weight-medium: 500;
+  --poppy-weight-bold: 700;
+
+  /* Color scale (host-themable) */
+  --poppy-color-default: #111;
+  --poppy-color-primary: #0b66ff;
+  --poppy-color-secondary: #6b7280;
+  --poppy-color-danger: #d4351c;
+  --poppy-color-success: #1e7c2c;
+}
+
+/* --- Stack ------------------------------------------------------------- */
+
+.poppy-stack {
+  display: flex;
+}
+
+.poppy-stack--horizontal {
+  flex-direction: row;
+}
+
+.poppy-stack--vertical {
+  flex-direction: column;
+}
+
+.poppy-stack--spacing-none {
+  gap: var(--poppy-space-none);
+}
+.poppy-stack--spacing-xs {
+  gap: var(--poppy-space-xs);
+}
+.poppy-stack--spacing-sm {
+  gap: var(--poppy-space-sm);
+}
+.poppy-stack--spacing-md {
+  gap: var(--poppy-space-md);
+}
+.poppy-stack--spacing-lg {
+  gap: var(--poppy-space-lg);
+}
+.poppy-stack--spacing-xl {
+  gap: var(--poppy-space-xl);
+}
+
+.poppy-stack--padding-none {
+  padding: var(--poppy-space-none);
+}
+.poppy-stack--padding-xs {
+  padding: var(--poppy-space-xs);
+}
+.poppy-stack--padding-sm {
+  padding: var(--poppy-space-sm);
+}
+.poppy-stack--padding-md {
+  padding: var(--poppy-space-md);
+}
+.poppy-stack--padding-lg {
+  padding: var(--poppy-space-lg);
+}
+.poppy-stack--padding-xl {
+  padding: var(--poppy-space-xl);
+}
+
+/*
+ * Cross-axis alignment (perpendicular to `axis`). For row stacks this aligns
+ * children vertically; for column stacks it aligns them horizontally. Flexbox's
+ * align-items maps directly.
+ */
+.poppy-stack--align-start {
+  align-items: flex-start;
+}
+.poppy-stack--align-center {
+  align-items: center;
+}
+.poppy-stack--align-end {
+  align-items: flex-end;
+}
+.poppy-stack--align-stretch {
+  align-items: stretch;
+}
+
+/* --- Text -------------------------------------------------------------- */
+
+.poppy-text {
+  font-size: var(--poppy-size-md);
+  font-weight: var(--poppy-weight-regular);
+  color: var(--poppy-color-default);
+}
+
+.poppy-text--size-xs {
+  font-size: var(--poppy-size-xs);
+}
+.poppy-text--size-sm {
+  font-size: var(--poppy-size-sm);
+}
+.poppy-text--size-md {
+  font-size: var(--poppy-size-md);
+}
+.poppy-text--size-lg {
+  font-size: var(--poppy-size-lg);
+}
+.poppy-text--size-xl {
+  font-size: var(--poppy-size-xl);
+}
+
+.poppy-text--weight-regular {
+  font-weight: var(--poppy-weight-regular);
+}
+.poppy-text--weight-medium {
+  font-weight: var(--poppy-weight-medium);
+}
+.poppy-text--weight-bold {
+  font-weight: var(--poppy-weight-bold);
+}
+
+.poppy-text--color-default {
+  color: var(--poppy-color-default);
+}
+.poppy-text--color-primary {
+  color: var(--poppy-color-primary);
+}
+.poppy-text--color-secondary {
+  color: var(--poppy-color-secondary);
+}
+.poppy-text--color-danger {
+  color: var(--poppy-color-danger);
+}
+.poppy-text--color-success {
+  color: var(--poppy-color-success);
+}
+
+/* --- Image ------------------------------------------------------------- */
+
+.poppy-image {
+  display: block;
+  max-width: 100%;
+}
+
+.poppy-image--fit-contain {
+  object-fit: contain;
+}
+.poppy-image--fit-cover {
+  object-fit: cover;
+}
+.poppy-image--fit-fill {
+  object-fit: fill;
+}
+
+/* --- Button ------------------------------------------------------------ */
+
+.poppy-button {
+  font-size: var(--poppy-size-md);
+  font-weight: var(--poppy-weight-medium);
+  padding: var(--poppy-space-sm) var(--poppy-space-md);
+  border: 1px solid var(--poppy-color-default);
+  background: transparent;
+  color: var(--poppy-color-default);
+  cursor: pointer;
+}
