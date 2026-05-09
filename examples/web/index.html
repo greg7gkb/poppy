@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Poppy — Web client smoke example</title>
+    <link rel="stylesheet" href="../../packages/client-web/dist/poppy.css" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 0;
+        background: #f7f7f8;
+      }
+      header {
+        padding: 16px 24px;
+        background: #fff;
+        border-bottom: 1px solid #e5e5e7;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 18px;
+      }
+      header p {
+        margin: 4px 0 0;
+        color: #6b7280;
+        font-size: 14px;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 24px;
+        padding: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      #app {
+        background: #fff;
+        border-radius: 8px;
+        padding: 24px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      }
+      aside {
+        background: #1e1e2e;
+        color: #cdd6f4;
+        border-radius: 8px;
+        padding: 16px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 13px;
+      }
+      aside h2 {
+        margin: 0 0 8px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #94a3b8;
+      }
+      #log {
+        margin: 0;
+        white-space: pre-wrap;
+        min-height: 200px;
+      }
+      #log .empty {
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Poppy — Web client smoke example</h1>
+      <p>
+        The panel on the left is rendered by <code>@poppy/client-web</code> from a Poppy document.
+        Click any button to see the action dispatched to the host.
+      </p>
+    </header>
+    <main>
+      <div id="app"></div>
+      <aside>
+        <h2>onAction log</h2>
+        <pre id="log"><span class="empty">click a button to see actions appear here</span></pre>
+      </aside>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

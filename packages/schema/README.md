@@ -4,7 +4,7 @@ JSON Schema definitions for Poppy documents — **the source of truth**. Every r
 
 ## Status
 
-**Phase 1, in progress.** Schema files for v0.1 are committed; package build and pnpm workspace wiring come in a subsequent Phase 1 session. The package is not yet installable from npm.
+**Phase 1 shipped (`v0.1.0-alpha`).** Schema files for v0.1 and TypeScript types are stable. The package is source-only in v0.1 (no build step); consumers import the types directly from `src/`. Not yet published to npm.
 
 ## What's here
 
