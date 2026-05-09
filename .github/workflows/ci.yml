@@ -37,10 +37,13 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Lint
         run: pnpm biome ci .
-      - name: Typecheck
-        run: pnpm -r typecheck
+      # Build runs before typecheck so downstream packages can resolve
+      # `@poppy/server-ts` (whose `exports` point to dist/, only present
+      # post-build). pnpm -r executes in topological order.
       - name: Build
         run: pnpm -r build
+      - name: Typecheck
+        run: pnpm -r typecheck
       - name: Test
         run: pnpm -r test
 
