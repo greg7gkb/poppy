@@ -3,8 +3,8 @@
 # (../../packages/client-web/dist/...) regardless of where you invoke this
 # script from. Defaults to port 8000; pass a number to override.
 #
-# Usage: ./serve.sh         # http://localhost:8000/examples/web/
-#        ./serve.sh 9000    # http://localhost:9000/examples/web/
+# Usage: ./run_server.sh         # http://localhost:8000/examples/web/
+#        ./run_server.sh 9000    # http://localhost:9000/examples/web/
 
 set -euo pipefail
 PORT="${1:-8000}"

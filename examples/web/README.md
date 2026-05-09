@@ -10,14 +10,14 @@ pnpm -r build
 
 # Start a local server. Use the bundled script — it works from anywhere.
 cd examples/web
-./serve.sh
+./run_server.sh
 ```
 
 Then open <http://localhost:8000/examples/web/>.
 
 > **Why a server?** ESM imports don't work over `file://` in browsers (CORS).
 >
-> **Why not raw `python3 -m http.server`?** This page imports the client bundle via `../../packages/client-web/dist/...`. Python's `http.server` serves files relative to the directory it's launched from — running it from `examples/web/` makes those `../../` paths escape the document root and 404. `serve.sh` solves this by always serving from the repo root. Equivalent one-liner: `python3 -m http.server 8000 --directory ../..` (run from this directory).
+> **Why not raw `python3 -m http.server`?** This page imports the client bundle via `../../packages/client-web/dist/...`. Python's `http.server` serves files relative to the directory it's launched from — running it from `examples/web/` makes those `../../` paths escape the document root and 404. `run_server.sh` solves this by always serving from the repo root. Equivalent one-liner: `python3 -m http.server 8000 --directory ../..` (run from this directory).
 
 Any static server works: `npx serve`, `caddy file-server`, `php -S` — as long as it's rooted at the repo root, not at `examples/web/`.
 
