@@ -47,5 +47,34 @@ jobs:
       - name: Test
         run: pnpm -r test
 
-  # Future jobs (conformance corpus across web/Android/iOS renderers) are
-  # added as the corresponding packages land.
+  android:
+    name: Android Compose
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      # Stub. The Android Compose package lands in Phase 2 Weeks 2-3 (per
+      # docs/phase-2-plan.md). When it does, this step is replaced with:
+      #   - uses: actions/setup-java@v4
+      #     with: { distribution: temurin, java-version: 17 }
+      #   - uses: gradle/actions/setup-gradle@v4
+      #   - working-directory: packages/client-android
+      #     run: ./gradlew check
+      - name: Stub
+        run: echo "Android Compose CI is stubbed. Real Gradle build lands with @poppy/client-android."
+
+  ios:
+    name: iOS SwiftUI
+    # macos-14 burns more runner minutes than Linux but is free for public repos.
+    # Top-level triggers (pull_request to main, push to main) already restrict
+    # this job from running on every feature-branch push.
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v6
+      # Stub. The iOS SwiftUI package lands in Phase 2 Weeks 2-3 (per
+      # docs/phase-2-plan.md). When it does, this step is replaced with:
+      #   - uses: maxim-lobanov/setup-xcode@v1
+      #     with: { xcode-version: '16.0' }
+      #   - working-directory: packages/client-ios
+      #     run: swift test
+      - name: Stub
+        run: echo "iOS SwiftUI CI is stubbed. Real swift test lands with poppy-ios."
