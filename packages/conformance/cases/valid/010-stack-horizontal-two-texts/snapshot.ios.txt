@@ -1,0 +1,4 @@
+PoppyDocument version="0.1"
+  Stack axis=horizontal
+    Text value="Left"
+    Text value="Right"

@@ -1,0 +1,4 @@
+PoppyDocument version="0.1"
+  Stack axis=vertical spacing=lg
+    Text value="A"
+    Text value="B"

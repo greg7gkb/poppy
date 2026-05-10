@@ -1,0 +1,3 @@
+PoppyDocument version="0.1"
+  Stack axis=vertical padding=md
+    Text value="Padded"

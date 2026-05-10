@@ -1,0 +1,11 @@
+PoppyDocument version="0.1"
+  Stack id="screen-root" axis=vertical padding=lg spacing=md alignment=stretch
+    Stack axis=horizontal spacing=sm alignment=center
+      Image url="https://example.com/avatar.png" alt="User avatar" width=48 height=48 fit=cover
+      Stack axis=vertical spacing=xs
+        Text size=lg weight=bold value="Greg"
+        Text color=secondary size=sm value="Signed in"
+    Text color=primary value="You have 3 unread notifications."
+    Stack axis=horizontal spacing=sm alignment=end
+      Button label="Dismiss" action.type=navigate action.uri="poppy://notifications/dismiss-all"
+      Button label="View all" action.type=navigate action.uri="poppy://notifications"

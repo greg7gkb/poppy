@@ -1,0 +1,2 @@
+PoppyDocument version="0.1"
+  Text weight=bold value="Bold text"

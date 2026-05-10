@@ -1,0 +1,4 @@
+PoppyDocument version="0.1"
+  Stack axis=vertical
+    Text value="First"
+    Text value="Second"
