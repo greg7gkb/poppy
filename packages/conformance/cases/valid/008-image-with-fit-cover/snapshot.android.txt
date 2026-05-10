@@ -1,7 +1,2 @@
-Printing with useUnmergedTree = 'true'
-Node
- |-Node
-   Text = '[<image src="https://example.com/image.png" fit="crop">]'
-   ContentDescription = '[Cover-fit image]'
-   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
-   MergeDescendants = 'true'
+PoppyDocument version="0.1"
+  Image url="https://example.com/image.png" alt="Cover-fit image" width=100 height=100 fit=cover

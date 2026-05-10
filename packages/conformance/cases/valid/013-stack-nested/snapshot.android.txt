@@ -1,14 +1,7 @@
-Printing with useUnmergedTree = 'true'
-Node
- |-Node
- | Text = '[Header]'
- | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
- |-Node
- | Text = '[Left]'
- | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
- |-Node
- | Text = '[Right]'
- | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
- |-Node
-   Text = '[Footer]'
-   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+PoppyDocument version="0.1"
+  Stack axis=vertical spacing=md
+    Text value="Header"
+    Stack axis=horizontal spacing=sm
+      Text value="Left"
+      Text value="Right"
+    Text value="Footer"

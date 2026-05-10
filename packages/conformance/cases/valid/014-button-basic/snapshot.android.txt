@@ -1,10 +1,2 @@
-Printing with useUnmergedTree = 'true'
-Node
- |-Node
-   Focused = 'false'
-   Role = 'Button'
-   Actions = [OnClick, RequestFocus]
-   MergeDescendants = 'true'
-    |-Node
-      Text = '[Continue]'
-      Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+PoppyDocument version="0.1"
+  Button label="Continue" action.type=navigate action.uri="poppy://next"

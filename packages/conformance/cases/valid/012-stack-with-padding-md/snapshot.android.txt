@@ -1,5 +1,3 @@
-Printing with useUnmergedTree = 'true'
-Node
- |-Node
-   Text = '[Padded]'
-   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+PoppyDocument version="0.1"
+  Stack axis=vertical padding=md
+    Text value="Padded"

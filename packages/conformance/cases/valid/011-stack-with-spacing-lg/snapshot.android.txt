@@ -1,8 +1,4 @@
-Printing with useUnmergedTree = 'true'
-Node
- |-Node
- | Text = '[A]'
- | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
- |-Node
-   Text = '[B]'
-   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+PoppyDocument version="0.1"
+  Stack axis=vertical spacing=lg
+    Text value="A"
+    Text value="B"

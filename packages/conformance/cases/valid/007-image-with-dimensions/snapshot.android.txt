@@ -1,7 +1,2 @@
-Printing with useUnmergedTree = 'true'
-Node
- |-Node
-   Text = '[<image src="https://example.com/image.png" fit="fit">]'
-   ContentDescription = '[Sized image]'
-   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
-   MergeDescendants = 'true'
+PoppyDocument version="0.1"
+  Image url="https://example.com/image.png" alt="Sized image" width=200 height=100

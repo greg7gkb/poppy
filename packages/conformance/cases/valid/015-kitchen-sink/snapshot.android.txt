@@ -1,34 +1,11 @@
-Printing with useUnmergedTree = 'true'
-Node
- |-Node, Tag: 'screen-root'
-   TestTagsAsResourceId = 'true'
-    |-Node
-    | Text = '[<image src="https://example.com/avatar.png" fit="crop">]'
-    | ContentDescription = '[User avatar]'
-    | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
-    | MergeDescendants = 'true'
-    |-Node
-    | Text = '[Greg]'
-    | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
-    |-Node
-    | Text = '[Signed in]'
-    | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
-    |-Node
-    | Text = '[You have 3 unread notifications.]'
-    | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
-    |-Node
-    | Focused = 'false'
-    | Role = 'Button'
-    | Actions = [OnClick, RequestFocus]
-    | MergeDescendants = 'true'
-    |  |-Node
-    |    Text = '[Dismiss]'
-    |    Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
-    |-Node
-      Focused = 'false'
-      Role = 'Button'
-      Actions = [OnClick, RequestFocus]
-      MergeDescendants = 'true'
-       |-Node
-         Text = '[View all]'
-         Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+PoppyDocument version="0.1"
+  Stack id="screen-root" axis=vertical padding=lg spacing=md alignment=stretch
+    Stack axis=horizontal spacing=sm alignment=center
+      Image url="https://example.com/avatar.png" alt="User avatar" width=48 height=48 fit=cover
+      Stack axis=vertical spacing=xs
+        Text size=lg weight=bold value="Greg"
+        Text color=secondary size=sm value="Signed in"
+    Text color=primary value="You have 3 unread notifications."
+    Stack axis=horizontal spacing=sm alignment=end
+      Button label="Dismiss" action.type=navigate action.uri="poppy://notifications/dismiss-all"
+      Button label="View all" action.type=navigate action.uri="poppy://notifications"

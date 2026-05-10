@@ -1,5 +1,2 @@
-Printing with useUnmergedTree = 'true'
-Node
- |-Node
-   Text = '[Large text]'
-   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+PoppyDocument version="0.1"
+  Text size=lg value="Large text"

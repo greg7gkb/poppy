@@ -1,5 +1,2 @@
-Printing with useUnmergedTree = 'true'
-Node
- |-Node
-   Text = '[Hello]'
-   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+PoppyDocument version="0.1"
+  Text value="Hello"

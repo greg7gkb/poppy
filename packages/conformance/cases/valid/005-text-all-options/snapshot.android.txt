@@ -1,5 +1,2 @@
-Printing with useUnmergedTree = 'true'
-Node
- |-Node
-   Text = '[All options]'
-   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+PoppyDocument version="0.1"
+  Text color=primary size=lg weight=bold value="All options"

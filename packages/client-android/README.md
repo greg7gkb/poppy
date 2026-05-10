@@ -135,7 +135,7 @@ in their app manifest — library modules cannot grant it.
 |---|---|
 | `CorpusTest` | Decodes every valid case; rejects every invalid case with the declared keyword. |
 | `BehaviorTest` | The per-case behavioral invariants in each `description.md`. |
-| `SnapshotTest` | Asserts every committed `snapshot.android.txt` matches the live render. |
+| `SnapshotTest` | Asserts every committed `snapshot.android.txt` matches the typed-document tree dump. Pure JVM (no Compose). |
 | `UpdateSnapshots` | Gated regenerator for the snapshot files (`./gradlew snapshotsUpdate`). |
 
 Tests run on JVM via Robolectric so `./gradlew check` exercises Compose
