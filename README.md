@@ -83,7 +83,7 @@ setContent {
 }
 ```
 
-See [`packages/client-android/`](packages/client-android/) for full API and theming docs.
+See [`examples/android/`](examples/android/) for a runnable APK demo, and [`packages/client-android/`](packages/client-android/) for full API and theming docs.
 
 ### iOS client: render into a SwiftUI view
 
@@ -99,7 +99,7 @@ case .failure(let errors):
 }
 ```
 
-See [`packages/client-ios/`](packages/client-ios/) for full API and theming docs.
+See [`examples/ios/`](examples/ios/) for a runnable demo (`swift run`-able as a macOS app, with notes on porting to a real iOS Xcode project), and [`packages/client-ios/`](packages/client-ios/) for full API and theming docs.
 
 ## Repository layout
 

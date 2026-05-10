@@ -13,6 +13,13 @@ plugins {
     alias(libs.plugins.compose.compiler)
 }
 
+// Maven coordinates so consumers (including examples/android via composite
+// build) can depend on this artifact as `dev.poppy:client-android:0.2.0-alpha`.
+// Not published to a registry yet — see ADR-0002 and the Phase 2 plan's
+// "Distribution" note.
+group = "dev.poppy"
+version = "0.2.0-alpha"
+
 android {
     namespace = "dev.poppy.android"
     compileSdk = libs.versions.compileSdk.get().toInt()

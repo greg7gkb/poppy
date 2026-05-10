@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The manifest theme governs the startup window and system bar colors
+         only. The app's actual UI is rendered by Compose (and inside that,
+         by Poppy). Using a built-in Android theme avoids pulling in the
+         Material XML stylesheet dep — Compose's MaterialTheme is what
+         renders the host shell at runtime. -->
+    <style name="Theme.PoppyExample" parent="@android:style/Theme.Material.Light.NoActionBar" />
+</resources>

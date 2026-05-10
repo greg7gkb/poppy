@@ -72,6 +72,11 @@ jobs:
       - name: Gradle check
         working-directory: packages/client-android
         run: ./gradlew check --stacktrace
+      - name: Build example app
+        working-directory: examples/android
+        # Compile the example APK to catch integration regressions
+        # (e.g. a renamed library API breaking the demo).
+        run: ./gradlew :app:assembleDebug --stacktrace
 
   ios:
     name: iOS SwiftUI
@@ -92,3 +97,8 @@ jobs:
         # compiles for iOS. The actual iOS-Simulator build is verified by the
         # Xcode test runner separately if/when we wire it up.
         run: swift test
+      - name: Build example app
+        working-directory: examples/ios/PoppyExample
+        # Compile the example app to catch integration regressions
+        # (e.g. a renamed library API breaking the demo).
+        run: swift build
