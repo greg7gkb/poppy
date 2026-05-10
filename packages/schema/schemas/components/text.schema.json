@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/components/text.schema.json",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/components/text.schema.json",
   "title": "Text",
   "description": "A run of plain text. Markdown and inline formatting are intentionally not supported in v0.1; defer to a separate RichText component if needed in a later version.",
   "type": "object",

@@ -24,7 +24,7 @@ const examplesDir = resolve(__dirname, "..", "..", "schema", "examples");
 const outDir = resolve(__dirname, "..", "src", "generated");
 
 const ROOT_ID =
-  "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/poppy.schema.json";
+  "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/poppy.schema.json";
 
 function loadJsonFiles(dir) {
   const out = [];

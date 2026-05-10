@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/components/image.schema.json",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/components/image.schema.json",
   "title": "Image",
   "description": "An image. Renderers MUST validate URLs against an allowlist before loading; the schema does not constrain the URL scheme. Required alt text is mandated for accessibility from day one.",
   "type": "object",

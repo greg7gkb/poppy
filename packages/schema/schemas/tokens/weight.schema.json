@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/tokens/weight.schema.json",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/tokens/weight.schema.json",
   "title": "Text weight token",
   "description": "Semantic text weight token. Default mapping to platform weights: regular=400, medium=500, bold=700.",
   "type": "string",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/poppy.schema.json",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/poppy.schema.json",
   "title": "Poppy document",
   "description": "A Poppy server-driven UI document, version 0.1. The root of every Poppy wire-format payload. See ADR-0006 for versioning rules.",
   "type": "object",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/tokens/color.schema.json",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/tokens/color.schema.json",
   "title": "Color token",
   "description": "Semantic color token. Each renderer maps these to platform colors via theme/CSS variables. Hosts may override the mappings. Phase 5's design system replaces this fixed set with extensible tokens.",
   "type": "string",

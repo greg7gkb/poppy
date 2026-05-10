@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/actions/navigate.schema.json",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/actions/navigate.schema.json",
   "title": "navigate action",
   "description": "Dispatches an opaque URI to the host application's onAction callback. The renderer never interprets the URI. The host owns routing.",
   "type": "object",

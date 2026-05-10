@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/components/stack.schema.json",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/components/stack.schema.json",
   "title": "Stack",
   "description": "A linear container that lays out its children along a single axis. The single layout primitive in v0.1 (replaces separate Row/Column).",
   "type": "object",

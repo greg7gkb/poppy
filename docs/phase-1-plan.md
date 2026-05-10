@@ -47,7 +47,7 @@ By end of Phase 1:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/poppy.schema.json",
+  "$schema": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/poppy.schema.json",
   "version": "0.1",
   "root": <Component>
 }

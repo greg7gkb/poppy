@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/components/button.schema.json",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/components/button.schema.json",
   "title": "Button",
   "description": "A pressable element with a label and an action. Variants and icons are intentionally deferred to Phase 5's design system.",
   "type": "object",

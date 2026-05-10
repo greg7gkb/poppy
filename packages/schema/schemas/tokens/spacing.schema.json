@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/tokens/spacing.schema.json",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/tokens/spacing.schema.json",
   "title": "Spacing token",
   "description": "Semantic spacing token. Each renderer maps these to platform-native units. Default mapping: none=0, xs=4, sm=8, md=16, lg=24, xl=32 (CSS px / Android dp / iOS pt).",
   "type": "string",

@@ -80,7 +80,7 @@ The two-token alignment (`MAJOR.MINOR` of document equals `MAJOR.MINOR` of packa
 Documents MAY include a top-level `$schema` field with a URL pointing to the canonical schema for that version, e.g.:
 
 ```
-https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/poppy.schema.json
+https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/poppy.schema.json
 ```
 
 This is purely an editor/tooling convenience. It is not used by renderers — the `version` field is authoritative.

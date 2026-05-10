@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/tokens/size.schema.json",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/tokens/size.schema.json",
   "title": "Text size token",
   "description": "Semantic text size token. Default mapping: xs=12, sm=14, md=16, lg=18, xl=22 (CSS px / Android sp / iOS pt).",
   "type": "string",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0/packages/schema/schemas/tokens/fit.schema.json",
+  "$id": "https://raw.githubusercontent.com/greg7gkb/poppy/v0.1.0-alpha/packages/schema/schemas/tokens/fit.schema.json",
   "title": "Image fit token",
   "description": "How an image fills its bounds when both width and height are specified. contain: scale to fit within bounds preserving aspect ratio. cover: scale to fill bounds preserving aspect ratio (cropping if needed). fill: stretch to fill bounds without preserving aspect ratio.",
   "type": "string",
