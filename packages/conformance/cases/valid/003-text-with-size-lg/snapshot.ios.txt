@@ -1,0 +1,2 @@
+PoppyDocument version="0.1"
+  Text size=lg value="Large text"

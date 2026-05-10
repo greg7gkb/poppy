@@ -1,0 +1,2 @@
+PoppyDocument version="0.1"
+  Button label="Continue" action.type=navigate action.uri="poppy://next"
