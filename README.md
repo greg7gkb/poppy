@@ -107,6 +107,7 @@ A single JSON Schema is the source of truth for what a Poppy document can contai
 - [ADR-0005 — Minimize third-party dependencies](docs/adr/0005-minimize-third-party-dependencies.md)
 - [ADR-0006 — Schema versioning](docs/adr/0006-schema-versioning.md)
 - [ADR-0007 — Ajv standalone precompile](docs/adr/0007-ajv-standalone-precompile.md)
+- [ADR-0008 — Cross-platform conformance strategy](docs/adr/0008-cross-platform-conformance-strategy.md)
 
 ## Contributing
 
