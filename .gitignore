@@ -40,9 +40,13 @@ captures/
 *.ap_
 *.dex
 proguard/
+# Gradle 8.x's `updateDaemonJvm` task writes here. Pins the daemon JVM
+# per-developer — another machine has a different JDK install.
+gradle-daemon-jvm.properties
 
 # Swift / iOS / Xcode
 .build/
+.swiftpm/
 DerivedData/
 *.xcuserstate
 xcuserdata/
