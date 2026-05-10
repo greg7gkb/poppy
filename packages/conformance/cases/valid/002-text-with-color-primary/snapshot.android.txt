@@ -1,0 +1,5 @@
+Printing with useUnmergedTree = 'true'
+Node
+ |-Node
+   Text = '[Primary color text]'
+   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]

@@ -1,0 +1,5 @@
+Printing with useUnmergedTree = 'true'
+Node
+ |-Node
+   Text = '[Padded]'
+   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]

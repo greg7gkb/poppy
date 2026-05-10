@@ -1,0 +1,5 @@
+Printing with useUnmergedTree = 'true'
+Node
+ |-Node
+   Text = '[Hello]'
+   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]

@@ -1,0 +1,14 @@
+Printing with useUnmergedTree = 'true'
+Node
+ |-Node
+ | Text = '[Header]'
+ | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+ |-Node
+ | Text = '[Left]'
+ | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+ |-Node
+ | Text = '[Right]'
+ | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+ |-Node
+   Text = '[Footer]'
+   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
