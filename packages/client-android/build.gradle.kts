@@ -76,6 +76,11 @@ kotlin {
         // subtypes; the API has been stable since 1.5+ but is still annotated
         // experimental in 1.7.
         freeCompilerArgs.add("-opt-in=kotlinx.serialization.ExperimentalSerializationApi")
+        // testTagsAsResourceId is the standard mechanism for exposing Compose
+        // testTags to the platform's resource-id system (required by some
+        // a11y / instrumentation tooling). Stable since Compose 1.5+, still
+        // marked experimental.
+        freeCompilerArgs.add("-opt-in=androidx.compose.ui.ExperimentalComposeUiApi")
     }
 }
 
