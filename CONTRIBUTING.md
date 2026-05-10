@@ -25,6 +25,18 @@ If a pull request adds a new third-party runtime dependency in any package, open
 
 Dev-only dependencies (linters, formatters, test runners) are less constrained but still warrant a brief justification in the PR description.
 
+## Developer prerequisites
+
+Poppy is a polyglot monorepo. You only need the toolchains for the packages you plan to touch.
+
+| Package | Toolchain | Verify with |
+|---|---|---|
+| `@poppy/*` (TypeScript) | Node.js 20+, pnpm 10+ | `node -v && pnpm -v` |
+| `packages/client-android/` | JDK 17+, Android SDK with platform 35 (API 35), Android Studio Iguana or newer (recommended) | `java -version` (look for `17`+); `./gradlew` works inside the package |
+| `packages/client-ios/` | Xcode 16+ on macOS with Swift 5.10+ | `xcodebuild -version && swift --version` |
+
+To run the full test suite locally before opening a PR, you'll need all three. CI runs them in isolated jobs, so a missing toolchain locally won't block your PR — it just means you'll discover failures in CI rather than on your machine.
+
 ## Workflow
 
 1. Fork the repository and clone your fork.
