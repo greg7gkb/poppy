@@ -67,15 +67,16 @@ jobs:
 
   ios:
     name: iOS SwiftUI
-    # macos-14 burns more runner minutes than Linux but is free for public repos.
+    # macos-15 carries Xcode 16+ as its default; macos-14 only goes to Xcode 15.
+    # macOS minutes burn more than Linux but are free for public repos.
     # Top-level triggers (pull_request to main, push to main) already restrict
     # this job from running on every feature-branch push.
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v6
       - uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '16.0'
+          xcode-version: 'latest-stable'
       - name: Swift test
         working-directory: packages/client-ios
         # Package.swift declares both .iOS(.v16) and .macOS(.v13). `swift test`
