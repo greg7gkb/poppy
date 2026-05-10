@@ -34,8 +34,9 @@ on Android and iOS via the same conformance corpus.
   `LocalPoppyImageLoader`. Documented in ADR-0010.
 - **JVM-runnable Compose UI tests** via Robolectric (test-only dep). CI
   on `ubuntu-latest` exercises the renderer without an emulator.
-- 15 committed `snapshot.android.txt` files using the unmerged
-  Compose semantics tree.
+- 15 committed `snapshot.android.txt` files derived from the typed
+  PoppyDocument tree (mirrors iOS's format byte-for-byte; same
+  format derives from the same wire format on both platforms).
 - ADR-0010 (Android theming) accepted.
 
 ### Added — iOS (`poppy-ios`)
@@ -88,10 +89,12 @@ on Android and iOS via the same conformance corpus.
 - Cross-platform "agreement" is enforced by (a) shared schema, (b) shared
   corpus inputs + per-platform behavioral assertions, (c) per-platform
   snapshot files reviewed in PRs. Per ADR-0008.
-- Snapshot file formats deliberately differ per platform (`snapshot.web.html`
-  is normalized HTML; `snapshot.android.txt` is Compose semantics tree;
-  `snapshot.ios.txt` is a custom typed-tree dump). Each chose what makes
-  sense for its platform; no cross-platform format standardization.
+- Snapshot file formats deliberately differ per platform: `snapshot.web.html`
+  is normalized HTML (because the web renderer's output IS HTML); the mobile
+  snapshots (`snapshot.android.txt`, `snapshot.ios.txt`) are byte-identical
+  typed-document tree dumps (because the document, not the platform widget
+  tree, is the comparison target). No cross-platform format standardization;
+  each chose what makes sense for its platform.
 - Not yet published to Maven Central / SwiftPM Registry. Install via git
   tag or vendoring.
 
