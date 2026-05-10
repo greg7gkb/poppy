@@ -26,26 +26,30 @@ struct PoppyStack: View {
         let paddingValue = theme.spacing(stack.padding ?? .none)
         let alignment = stack.alignment ?? .start
 
-        Group {
-            switch stack.axis {
-            case .vertical:
-                VStack(alignment: alignment.swiftUIHorizontal, spacing: spacingValue) {
-                    ForEach(Array(stack.children.enumerated()), id: \.offset) { _, child in
-                        ComponentView(component: child, host: host)
-                            .applyStretch(alignment: alignment, axis: .vertical)
-                    }
-                }
-            case .horizontal:
-                HStack(alignment: alignment.swiftUIVertical, spacing: spacingValue) {
-                    ForEach(Array(stack.children.enumerated()), id: \.offset) { _, child in
-                        ComponentView(component: child, host: host)
-                            .applyStretch(alignment: alignment, axis: .horizontal)
-                    }
+        // Apply the .padding modifier directly to the VStack / HStack rather
+        // than to an outer Group. This keeps the padding modifier discoverable
+        // by ViewInspector via .find(ViewType.VStack.self).padding() and lets
+        // SwiftUI lay the container out flush against the padding bounds.
+        switch stack.axis {
+        case .vertical:
+            VStack(alignment: alignment.swiftUIHorizontal, spacing: spacingValue) {
+                ForEach(Array(stack.children.enumerated()), id: \.offset) { _, child in
+                    ComponentView(component: child, host: host)
+                        .applyStretch(alignment: alignment, axis: .vertical)
                 }
             }
+            .padding(paddingValue)
+            .modifier(PoppyIdentifier(id: stack.id))
+        case .horizontal:
+            HStack(alignment: alignment.swiftUIVertical, spacing: spacingValue) {
+                ForEach(Array(stack.children.enumerated()), id: \.offset) { _, child in
+                    ComponentView(component: child, host: host)
+                        .applyStretch(alignment: alignment, axis: .horizontal)
+                }
+            }
+            .padding(paddingValue)
+            .modifier(PoppyIdentifier(id: stack.id))
         }
-        .padding(paddingValue)
-        .modifier(PoppyIdentifier(id: stack.id))
     }
 }
 
