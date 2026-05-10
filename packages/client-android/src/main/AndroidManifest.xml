@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+        Coil fetches images over HTTP. Hosts that need network access for image
+        loading must declare this permission in their app manifest; library
+        modules cannot grant it. See README §"Permissions".
+    -->
+</manifest>
