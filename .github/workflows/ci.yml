@@ -31,7 +31,7 @@ jobs:
       - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v6
         with:
-          node-version: '20'
+          node-version: '22'
           cache: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -52,15 +52,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
-          java-version: '17'
-      - uses: android-actions/setup-android@v3
+          # Build's source/target compatibility is Java 17, but JDK 21 is
+          # forward-compatible (compiles to a Java 17 target). Bumping the
+          # runner JDK keeps the bytecode at 17 — consumers still need
+          # only JDK 17+.
+          java-version: '21'
+      - uses: android-actions/setup-android@v4
         with:
           # Match compileSdk in packages/client-android/build.gradle.kts.
           packages: 'platforms;android-35 build-tools;35.0.0'
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v6
+        with:
+          # Use the OSS basic cache provider, not the proprietary one v5+
+          # introduced. Aligns with ADR-0005 (minimize third-party deps).
+          cache-provider: basic
       - name: Gradle check
         working-directory: packages/client-android
         run: ./gradlew check --stacktrace

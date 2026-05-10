@@ -1,6 +1,8 @@
-# `@poppy/client-android`
+# `poppy-android`
 
 Kotlin + Jetpack Compose renderer for Poppy v0.1 documents.
+
+The Gradle module's published artifact name is `poppy-android` (no `@poppy/` prefix — that's an npm convention used only by the TypeScript packages).
 
 ## Status
 
@@ -110,7 +112,7 @@ Standalone Gradle (Kotlin DSL). No parent settings file — running
 ```
 
 Requirements:
-- JDK 17 (the Compose K2 compiler requires 17+).
+- JDK 17+ (the Compose K2 compiler requires 17+; CI uses JDK 21, which compiles to a Java 17 target — consumers still need only 17+).
 - Android SDK with platform 35 installed; set `sdk.dir` in `local.properties`
   (gitignored) or via the `ANDROID_HOME` env var.
 
