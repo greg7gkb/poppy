@@ -124,7 +124,7 @@ This is a polyglot monorepo. Each package uses its native build tooling.
 - **Phase 1** — Schema v0.1, TypeScript server library, native HTML web client, conformance corpus. *(shipped — `v0.1.0-alpha`)*
 - **Phase 2** — Android Compose + iOS SwiftUI clients. *(shipped — `v0.2.0-alpha`)*
 - **Phase 3** — Optional React renderer + Creator web app.
-- **Phase 4** — Schema iteration: theming primitives, slots, async data, accessibility.
+- **Phase 4** — Schema iteration: theming primitives, slots, async data, accessibility. *(backlog tracked in [`docs/phase-4-backlog.md`](docs/phase-4-backlog.md))*
 - **Phase 5 (optional)** — Design system layer: tokens, variants, themes.
 
 See [`docs/phase-1-plan.md`](docs/phase-1-plan.md) and [`docs/phase-2-plan.md`](docs/phase-2-plan.md) for the per-phase specifications, and [`CHANGELOG.md`](CHANGELOG.md) for the release log.
