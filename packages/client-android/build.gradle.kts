@@ -70,9 +70,12 @@ android {
 kotlin {
     jvmToolchain(libs.versions.java.get().toInt())
     compilerOptions {
-        // Kotlin 2.0+ K2 compiler is the default; nothing to opt into.
-        // We keep explicit API mode off for ergonomics; the public API surface
-        // is small and audited via the README.
+        // Opt in to the kotlinx.serialization MissingFieldException API used
+        // in Validate.kt's error mapping. The exception type is necessary for
+        // distinguishing missing-field errors from other SerializationException
+        // subtypes; the API has been stable since 1.5+ but is still annotated
+        // experimental in 1.7.
+        freeCompilerArgs.add("-opt-in=kotlinx.serialization.ExperimentalSerializationApi")
     }
 }
 
