@@ -1,0 +1,10 @@
+Printing with useUnmergedTree = 'true'
+Node
+ |-Node
+   Focused = 'false'
+   Role = 'Button'
+   Actions = [OnClick, RequestFocus]
+   MergeDescendants = 'true'
+    |-Node
+      Text = '[Continue]'
+      Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]

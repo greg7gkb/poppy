@@ -1,0 +1,8 @@
+Printing with useUnmergedTree = 'true'
+Node
+ |-Node
+ | Text = '[First]'
+ | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+ |-Node
+   Text = '[Second]'
+   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]

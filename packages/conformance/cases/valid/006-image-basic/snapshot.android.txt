@@ -1,0 +1,7 @@
+Printing with useUnmergedTree = 'true'
+Node
+ |-Node
+   Text = '[<image src="https://example.com/image.png" fit="fit">]'
+   ContentDescription = '[An example image]'
+   Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+   MergeDescendants = 'true'

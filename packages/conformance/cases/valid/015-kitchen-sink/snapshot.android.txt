@@ -1,0 +1,34 @@
+Printing with useUnmergedTree = 'true'
+Node
+ |-Node, Tag: 'screen-root'
+   TestTagsAsResourceId = 'true'
+    |-Node
+    | Text = '[<image src="https://example.com/avatar.png" fit="crop">]'
+    | ContentDescription = '[User avatar]'
+    | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+    | MergeDescendants = 'true'
+    |-Node
+    | Text = '[Greg]'
+    | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+    |-Node
+    | Text = '[Signed in]'
+    | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+    |-Node
+    | Text = '[You have 3 unread notifications.]'
+    | Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+    |-Node
+    | Focused = 'false'
+    | Role = 'Button'
+    | Actions = [OnClick, RequestFocus]
+    | MergeDescendants = 'true'
+    |  |-Node
+    |    Text = '[Dismiss]'
+    |    Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]
+    |-Node
+      Focused = 'false'
+      Role = 'Button'
+      Actions = [OnClick, RequestFocus]
+      MergeDescendants = 'true'
+       |-Node
+         Text = '[View all]'
+         Actions = [SetTextSubstitution, ShowTextSubstitution, ClearTextSubstitution, GetTextLayoutResult]

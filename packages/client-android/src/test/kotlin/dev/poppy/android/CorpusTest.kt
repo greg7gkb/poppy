@@ -16,7 +16,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Assert.fail
 import org.junit.Test
 
-class ValidateTest {
+class CorpusTest {
 
     @Test
     fun `every valid corpus case decodes to a PoppyDocument`() {
