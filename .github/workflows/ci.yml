@@ -1,10 +1,30 @@
 name: CI
 
+# Path filters skip CI for changes that only touch docs / governance text.
+# Mixed PRs (one .md plus one .kt) still trigger CI — paths-ignore only
+# fires when EVERY changed path matches an ignore pattern.
+#
+# Workflow files themselves (`.github/workflows/**`) are deliberately NOT
+# ignored, so changes to CI config always run CI.
 on:
   pull_request:
     branches: [main]
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+      - 'LICENSE'
+      - 'NOTICE'
+      - '.gitignore'
+      - '**/.gitignore'
   push:
     branches: [main]
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+      - 'LICENSE'
+      - 'NOTICE'
+      - '.gitignore'
+      - '**/.gitignore'
 
 jobs:
   meta:
