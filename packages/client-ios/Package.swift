@@ -16,6 +16,11 @@ let package = Package(
     name: "Poppy",
     platforms: [
         .iOS(.v16),
+        // macOS is declared so `swift test` runs on the developer's host
+        // without spinning up a simulator. The renderer uses only SwiftUI
+        // primitives that exist on both platforms; CI's iOS job pins to
+        // a real iOS-Simulator destination.
+        .macOS(.v13),
     ],
     products: [
         .library(

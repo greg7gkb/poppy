@@ -131,7 +131,7 @@ public struct Stack: Codable, Sendable, Equatable {
     public let children: [Component]
     public let spacing: Spacing?
     public let padding: Spacing?
-    public let alignment: Alignment?
+    public let alignment: PoppyAlignment?
 
     /// Synthesised Codable would also try to decode the discriminator `type`
     /// field. That's harmless on decode (we drop it), but listing the keys
@@ -146,7 +146,7 @@ public struct Stack: Codable, Sendable, Equatable {
         children: [Component],
         spacing: Spacing? = nil,
         padding: Spacing? = nil,
-        alignment: Alignment? = nil
+        alignment: PoppyAlignment? = nil
     ) {
         self.id = id
         self.axis = axis

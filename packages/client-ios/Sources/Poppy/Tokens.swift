@@ -39,7 +39,7 @@ public enum Weight: String, Codable, Sendable, Equatable, Hashable, CaseIterable
     case bold
 }
 
-public enum Alignment: String, Codable, Sendable, Equatable, Hashable, CaseIterable {
+public enum PoppyAlignment: String, Codable, Sendable, Equatable, Hashable, CaseIterable {
     case start
     case center
     case end
