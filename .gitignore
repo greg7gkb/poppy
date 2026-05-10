@@ -32,6 +32,7 @@ coverage/
 # Kotlin / Android / Gradle
 *.iml
 .gradle/
+.kotlin/
 local.properties
 captures/
 *.apk
