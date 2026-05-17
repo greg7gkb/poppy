@@ -146,6 +146,7 @@ A single JSON Schema is the source of truth for what a Poppy document can contai
 - [ADR-0009 — Mobile renderer validation strategy](docs/adr/0009-mobile-validation-strategy.md)
 - [ADR-0010 — Android theming](docs/adr/0010-android-theming.md)
 - [ADR-0011 — iOS theming](docs/adr/0011-ios-theming.md)
+- [ADR-0012 — React renderer strategy](docs/adr/0012-react-renderer-strategy.md)
 
 ## Contributing
 
